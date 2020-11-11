@@ -15,7 +15,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
   font-size: 0.875rem;
   font-family: "Spartan", sans-serif;
 }
@@ -36,11 +35,11 @@ body {
 
 @media (min-width: 64em) {
   .container {
-    padding: 5rem 8rem;
+    padding: 7rem 10rem 5rem 10rem;
     background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
-    background-size: 35%, 83%;
+    background-size: 40%, 83%;
     background-repeat: no-repeat, no-repeat;
-    background-position: top 0px left -65px, bottom 0px right 0px;
+    background-position: top 0px left 0px, bottom 0px right 0px;
   }
 }
 
