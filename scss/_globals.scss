@@ -30,7 +30,7 @@ body {
     background-position: top 0px left 0px, bottom 0px right 0px;
 
     @include breakpoint-up(large) {
-        padding: 4rem 7rem;
+        padding: 5rem 7rem;
         background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
         background-size: 35%, 83%;
         background-repeat: no-repeat, no-repeat;
