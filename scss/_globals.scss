@@ -1,0 +1,195 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: $font-sm;
+    font-family: "Spartan", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 1.5625rem;
+    font-weight: $thin;
+
+    background-image: url("/images/bg-pattern-top-mobile.svg"), url("/images/bg-pattern-bottom-mobile.svg");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0px left 0px, bottom 0px right 0px;
+
+    @include breakpoint-up(large) {
+        padding: 4rem 7rem;
+        background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+        background-size: 35%, 83%;
+        background-repeat: no-repeat, no-repeat;
+        background-position: top 0px left -65px, bottom 0px right 0px;
+    }
+
+    * {
+        flex: 1 1 100%;
+
+        @include breakpoint-up(large) {
+            flex: 1 1 50%;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 0.5rem;
+        flex: 1 1 100%;
+
+        @include breakpoint-up(large) {
+            flex: 1 1 40%;
+            text-align: left;
+            padding-right: 6rem;
+            font-size: 15px;
+        }
+
+        h1 {
+            color: $veryDarkMagenta;
+        }
+
+        p {
+            color: $darkGrayishMagenta;
+            line-height: 1.5;
+        }
+    }
+
+    &__rates {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+        font-size: $font-sm;
+
+        @include breakpoint-up(large) {
+            flex: 1 1 50%;
+            justify-content: center;
+
+            .star {
+                margin-left: -10px;
+                margin-right: 0px;
+            }
+            .star:first-child {
+                margin-left: -50px;
+                margin-right: 70px;
+            }
+
+            .star:last-child {
+                margin-left: 50px;
+                margin-right: -40px;
+            }
+        }
+
+        .star {
+            margin: 0.5rem;
+            border-radius: 0.625rem;
+            background-color: $lightGrayishMagenta;
+            color: $veryDarkMagenta;
+            font-weight: $bold;
+
+            @include breakpoint-up(large) {
+                display: inline-flex;
+                align-items: baseline;
+                justify-content: center;
+                max-width: 28.125rem;
+                max-height: 3.25rem;
+                margin: 0;
+
+                p {
+                    margin-top: 1rem;
+                    max-width: max-content;
+                    max-height: max-content;
+                    margin-right: 0.5rem;
+                    padding: 0;
+                }
+
+                img {
+                    max-width: 1.125rem;
+                    max-height: 1.125rem;
+                    margin-right: 0.055rem;
+                }
+            }
+        }
+    }
+
+    &__reviews {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+
+        @include breakpoint-up(large) {
+            flex: 1 1 100%;
+
+            .description:first-child {
+                margin-top: -10px;
+                margin-bottom: 40px;
+            }
+
+            .description:last-child {
+                margin-top: 40px;
+                margin-bottom: -10px;
+            }
+        }
+
+        .description {
+            flex: 1 1 20%;
+            margin: 0.5rem;
+            padding: 1.25rem 2.0625rem;
+            border-radius: 0.625rem;
+            line-height: 1.5;
+            background-color: $veryDarkMagenta;
+
+            @include breakpoint-down(medium) {
+                flex: 1 1 70%;
+            }
+
+            @include breakpoint-up(large) {
+                margin: 0.8125rem;
+            }
+
+            &__identity {
+                display: flex;
+
+                img {
+                    flex: 1 1 2.8125rem;
+                    height: 2.8125rem;
+                    border-radius: 50%;
+                }
+
+                &_name {
+                    flex: 1 1 100%;
+                    margin-left: 1.5625rem;
+
+                    h4 {
+                        color: $white;
+                        margin: 0.5rem 0 0 0;
+                    }
+
+                    p:last-child {
+                        margin-top: 0;
+                        color: $softPink;
+                    }
+                }
+            }
+
+            p {
+                font-size: $font-sm;
+                color: $lightGrayishMagenta;
+            }
+        }
+    }
+}
