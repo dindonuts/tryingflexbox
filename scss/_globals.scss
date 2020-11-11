@@ -30,7 +30,7 @@ body {
     background-position: top 0px left 0px, bottom 0px right 0px;
 
     @include breakpoint-up(large) {
-        padding: 5rem 7rem;
+        padding: 5rem 8rem;
         background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
         background-size: 35%, 83%;
         background-repeat: no-repeat, no-repeat;
@@ -148,7 +148,7 @@ body {
         .description {
             flex: 1 1 20%;
             margin: 0.5rem;
-            padding: 1.25rem 2.0625rem;
+            padding: 1.825rem 2.0625rem;
             border-radius: 0.625rem;
             line-height: 1.5;
             background-color: $veryDarkMagenta;
@@ -189,6 +189,7 @@ body {
             p {
                 font-size: $font-sm;
                 color: $lightGrayishMagenta;
+                margin-bottom: 0;
             }
         }
     }

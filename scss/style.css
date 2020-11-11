@@ -36,7 +36,7 @@ body {
 
 @media (min-width: 64em) {
   .container {
-    padding: 5rem 7rem;
+    padding: 5rem 8rem;
     background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
     background-size: 35%, 83%;
     background-repeat: no-repeat, no-repeat;
@@ -194,7 +194,7 @@ body {
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
   margin: 0.5rem;
-  padding: 1.25rem 2.0625rem;
+  padding: 1.825rem 2.0625rem;
   border-radius: 0.625rem;
   line-height: 1.5;
   background-color: #502050;
@@ -248,5 +248,6 @@ body {
 .container__reviews .description p {
   font-size: 0.875rem;
   color: #f7f2f7;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
